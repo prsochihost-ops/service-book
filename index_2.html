@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Сервис-бук — Белый Мыс · Лёгкий стиль</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style_2.css">
+</head>
+<body>
+
+<!-- ===== ИКОНКИ (монохромный спрайт) ===== -->
+<svg style="display:none" aria-hidden="true">
+  <symbol id="icon-hand" viewBox="0 0 24 24"><path d="M4 12.5l3.2 3.5a3 3 0 0 0 4.3.1l2.5-2.6 1.9 1.9c1 1 2.6 1 3.6 0 1-1 1-2.6 0-3.6l-3.9-3.9c-.9-.9-2.2-.9-3.1 0l-.9.9M11 11l-1.8-1.8c-.8-.8-2-.8-2.8 0-.8.8-.8 2 0 2.8L8 13.6"/></symbol>
+  <symbol id="icon-bulb" viewBox="0 0 24 24"><path d="M9 18h6M10 21h4"/><path d="M8 10a4 4 0 1 1 8 0c0 1.8-.8 3-2 4.2-.5.6-.8 1.3-.9 2H11c-.1-.7-.4-1.4-.9-2C8.8 13 8 11.8 8 10Z"/></symbol>
+  <symbol id="icon-smile" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M9 10h.01M15 10h.01"/><path d="M9 14c1 .8 2 .8 3 .8s2 0 3-.8"/></symbol>
+  <symbol id="icon-neutral" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M9 10h.01M15 10h.01"/><path d="M9 15h6"/></symbol>
+  <symbol id="icon-sad" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M9 10h.01M15 10h.01"/><path d="M9 16c1-.8 2-.8 3-.8s2 0 3 .8"/></symbol>
+  <symbol id="icon-open" viewBox="0 0 24 24"><path d="M2.5 12s3.5-5 9.5-5 9.5 5 9.5 5-3.5 5-9.5 5-9.5-5-9.5-5Z"/><circle cx="12" cy="12" r="3"/></symbol>
+  <symbol id="icon-hands" viewBox="0 0 24 24"><path d="M8.5 6 6 8.5c-1.4 1.4-1.4 3.6 0 5l3.5 3.5c.6.6 1.6.6 2.2 0l1.8-1.8M15.5 6 18 8.5c1.4 1.4 1.4 3.6 0 5l-3.5 3.5c-.6.6-1.6.6-2.2 0l-1.8-1.8"/></symbol>
+  <symbol id="icon-stand" viewBox="0 0 24 24"><path d="M12 5v3"/><circle cx="12" cy="3.5" r="1.5"/><path d="M9 21l1.2-7.5c.1-.8.8-1.5 1.6-1.5h.4c.8 0 1.5.7 1.6 1.5L15 21"/><path d="M8 12h8"/></symbol>
+  <symbol id="icon-step" viewBox="0 0 24 24"><path d="M12 5.5a2 2 0 1 1-4 0 2 2 0 0 1 4 0ZM10 7l-2 7"/><path d="M14 7l-1 4-2 3-3 2.5"/><path d="M5 20h3l2-3 3-2 3 2v3"/></symbol>
+  <symbol id="icon-wave" viewBox="0 0 24 24"><path d="M6 6.5 9 4c.6-.6 1.6-.6 2.2 0l1 1c.6.6.6 1.6 0 2.2l-1.2 1.2"/><path d="M11 6l2.3-1.6c.7-.5 1.7-.3 2.2.4l1 1.5c.5.7.3 1.7-.4 2.2l-1.3.9"/><path d="M7 9l-1.6 1.6c-.6.6-.6 1.6 0 2.2l3.8 3.8c1.1 1.1 3 .8 3.7-.5l.6-1.2M14 12l3 3"/></symbol>
+  <symbol id="icon-group" viewBox="0 0 24 24"><circle cx="12" cy="8" r="3"/><path d="M5.5 19c.4-2.7 3-4 6.5-4s6.1 1.3 6.5 4"/></symbol>
+  <symbol id="icon-lean" viewBox="0 0 24 24"><path d="M8 4v16"/><path d="M4 8h8"/><path d="M12 8 9 21"/></symbol>
+  <symbol id="icon-phone" viewBox="0 0 24 24"><path d="M7 3h10v18H7Z"/><path d="M10 6h4"/><circle cx="12" cy="18" r="1.2"/></symbol>
+</svg>
+
+<!-- ===== ОБЛОЖКА ===== -->
+<div class="page cover">
+  <img src="logo_bm.svg" alt="Белый Мыс" class="cover__logo">
+  <div class="cover__tag">Сервис-бук</div>
+  <div class="cover__title">Белый мыс</div>
+  <div class="cover__subtitle">Основы гостеприимства и правила работы</div>
+</div>
+
+<!-- ===== СТРАНИЦА 2: СОДЕРЖАНИЕ ===== -->
+<div class="page">
+  <div class="page-header">
+    <span>Сервис-бук · Белый мыс</span>
+    <span class="page-header__section">Содержание</span>
+  </div>
+
+  <h1 class="h1">Содержание</h1>
+
+  <div class="grid-2" style="gap:18px; margin-top:10px;">
+    <div>
+      <div class="h3" style="color: var(--muted); text-transform: uppercase; letter-spacing: 0.6px;">Гостеприимство</div>
+      <ul class="list">
+        <li class="list__item">Введение — 3</li>
+        <li class="list__item">Гостеприимство — 4</li>
+        <li class="list__item">Теория ожиданий — 6</li>
+        <li class="list__item">Гостеприимное поведение — 7</li>
+        <li class="list__item">Невербальное проявление — 8</li>
+        <li class="list__item">Принцип SERVICE — 9</li>
+      </ul>
+    </div>
+    <div>
+      <div class="h3" style="color: var(--muted); text-transform: uppercase; letter-spacing: 0.6px;">Общие правила</div>
+      <ul class="list">
+        <li class="list__item">Про сервис — 14</li>
+        <li class="list__item">Общие принципы — 15</li>
+        <li class="list__item">Правила взаимодействия — 16</li>
+        <li class="list__item">Правила санитарии — 17</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="page-number"><span class="page-number__dot"></span>02</div>
+</div>
+
+<!-- ===== СТРАНИЦА 3: ВВЕДЕНИЕ ===== -->
+<div class="page">
+  <div class="page-header">
+    <span>Сервис-бук · Белый мыс</span>
+    <span class="page-header__section">Введение</span>
+  </div>
+
+  <h1 class="h1 h1--light">Введение</h1>
+
+  <div class="highlight-box">
+    <p class="text text--bold" style="margin-bottom: 6px;">
+      «Белый мыс» — это место, где традиции, фантазия и страсть встречаются в изысканных винах и оригинальных впечатлениях.
+    </p>
+    <p class="text text--muted" style="margin-bottom:0;">
+      Это место, где встречается весь город, где особая атмосфера для различных поводов, где <strong>имя каждого важно!</strong>
+    </p>
+  </div>
+
+  <p class="text text--muted">Для того, чтобы в «Белом мысе» каждый день был таким, каким его задумали создатели, мы с вниманием относимся ко всему, что делаем:</p>
+
+  <div class="intro-block">
+    <div class="badge">01</div>
+    <div class="flex-1">
+      <div class="h3" style="margin-bottom:4px;">Создаём атмосферу</div>
+      <p class="text text--muted">Мы знаем, как много значат те минуты, которые гость посвящает отдыху. Создаём пространство, где приятно проводить досуг, праздники и встречи.</p>
+    </div>
+  </div>
+
+  <div class="intro-block">
+    <div class="badge">02</div>
+    <div class="flex-1">
+      <div class="h3" style="margin-bottom:4px;">Развиваем вкус</div>
+      <p class="text text--muted">Учимся, отрабатываем подачу, дегустируем и делимся обратной связью, чтобы гости наслаждались широкой палитрой вкусов.</p>
+    </div>
+  </div>
+
+  <div class="intro-block">
+    <div class="badge">03</div>
+    <div class="flex-1">
+      <div class="h3" style="margin-bottom:4px;">Окружаем гостеприимством</div>
+      <p class="text text--muted">Встречаем радушно, запоминаем имена, помогаем выбрать комфортное место и заботливо сопровождаем пребывание.</p>
+    </div>
+  </div>
+
+  <div class="accent-box">
+    <div class="cta-chip">
+      <svg class="icon icon--amber"><use href="#icon-bulb" /></svg>
+      Нам важно, чтобы каждый горожанин разделял и транслировал наши ценности
+    </div>
+  </div>
+
+  <p class="text text--muted">Эта книга поможет понять, что нужно <strong>делать</strong> (и чего <strong>не делать</strong>), чтобы гости уходили в «+».</p>
+
+  <div class="page-number"><span class="page-number__dot"></span>03</div>
+</div>
+
+<!-- ===== СТРАНИЦА 4: ГОСТЕПРИИМСТВО ===== -->
+<div class="page">
+  <div class="page-header">
+    <span>Сервис-бук · Белый мыс</span>
+    <span class="page-header__section">Гостеприимство</span>
+  </div>
+
+  <h1 class="h1 h1--light">Гостеприимство</h1>
+
+  <div class="flex flex--gap">
+    <div class="flex-1">
+      <div class="highlight-box">
+        <p class="text text--bold" style="margin-bottom:4px;">Гостеприимство — не набор правил, а отношение к людям и атмосфере.</p>
+        <p class="text text--muted" style="margin-bottom:0;">Это про заботу и про успешный бизнес.</p>
+      </div>
+      <p class="text text--muted" style="margin-bottom:8px;"><strong>Гостеприимство</strong> — основа всей нашей работы. Сервис успешен только когда он гостеприимен.</p>
+      <p class="text text--muted" style="margin-bottom:8px;">Решать сложные ситуации можно, если смотреть на них через призму гостеприимства и помнить, что люди разные — нужен персональный подход.</p>
+    </div>
+    <div style="width:170px; flex-shrink:0;">
+      <div class="accent-box" style="text-align:center; padding:12px 14px;">
+        <svg class="icon icon--lg"><use href="#icon-hand" /></svg>
+        <p class="text text--small text--bold" style="margin:8px 0 0; line-height:1.4;">Гостеприимство — забота о том, насколько комфортно гостю</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="accent-box" style="margin:12px 0;">
+    <div class="h3" style="color: var(--green); margin-bottom:4px;">Смотреть глазами гостей</div>
+    <p class="text text--small text--muted" style="margin-bottom:0;">Важно относиться к обратной связи с благодарностью — это путь к росту и профессионализму.</p>
+  </div>
+
+  <p class="text text--muted" style="margin-bottom:10px;">Красная нить гостеприимства проходит и внутри команды: к новичкам, коллегам, партнёрам. Это часть нашего успеха.</p>
+
+  <h2 class="h2">Гостеприимство для нас означает:</h2>
+
+  <div class="grid-2" style="margin-top:10px; margin-bottom:42px;">
+    <div class="principle-card">
+      <div class="principle-card__number">1</div>
+      <div class="principle-card__title">Радушие и забота</div>
+      <div class="principle-card__text">Каждый человек — желанный гость. Создаём атмосферу радушия и заботы.</div>
+    </div>
+    <div class="principle-card">
+      <div class="principle-card__number">2</div>
+      <div class="principle-card__title">Персональный подход</div>
+      <div class="principle-card__text">Каждый особенный. Ищем подход, чтобы гостю было хорошо.</div>
+    </div>
+    <div class="principle-card">
+      <div class="principle-card__number">3</div>
+      <div class="principle-card__title">Внимание к деталям</div>
+      <div class="principle-card__text">Детали и позитивное настроение формируют гостеприимное пространство.</div>
+    </div>
+    <div class="principle-card">
+      <div class="principle-card__number">4</div>
+      <div class="principle-card__title">Гость — смысл работы</div>
+      <div class="principle-card__text">Делаем всё, чтобы гости получали искреннее удовольствие, выбирая нас.</div>
+    </div>
+  </div>
+
+  <div class="page-number"><span class="page-number__dot"></span>04</div>
+</div>
+
+<!-- ===== СТРАНИЦА 5: ТЕОРИЯ ОЖИДАНИЙ ===== -->
+<div class="page">
+  <div class="page-header">
+    <span>Сервис-бук · Белый мыс</span>
+    <span class="page-header__section">Гостеприимство</span>
+  </div>
+
+  <h1 class="h1 h1--light">Теория ожиданий</h1>
+  <p class="text text--muted"><strong>Наша цель</strong> — стремиться превзойти ожидания гостей, делая больше, чем базовый стандарт.</p>
+  <p class="text text--muted">Базовый уровень есть у всех — он не выделяет. Превосходить ожидания и показывать, что нам не всё равно, — выделяет.</p>
+
+  <h2 class="h2" style="margin-top:12px;">После посещения гости могут быть:</h2>
+
+  <div class="expectation-row expectation-row--negative">
+    <svg class="icon icon--amber"><use href="#icon-sad" /></svg>
+    <div class="expectation-label">«−»</div>
+    <div class="expectation-text"><strong>Недовольны.</strong> Мы не оправдали ожидания.</div>
+  </div>
+  <div class="expectation-row expectation-row--neutral">
+    <svg class="icon" style="stroke: var(--muted);"><use href="#icon-neutral" /></svg>
+    <div class="expectation-label">«0»</div>
+    <div class="expectation-text"><strong>Без вау.</strong> Дали ровно то, что ожидали.</div>
+  </div>
+  <div class="expectation-row expectation-row--positive">
+    <svg class="icon" style="stroke: var(--green-soft);"><use href="#icon-smile" /></svg>
+    <div class="expectation-label">«+»</div>
+    <div class="expectation-text"><strong>Праздник.</strong> Превзошли ожидания.</div>
+  </div>
+
+  <div class="accent-box" style="margin-top:16px;">
+    <div class="h3" style="color: var(--green);">Почему важно «+»</div>
+    <ul class="list" style="margin-top:6px;">
+      <li class="list__item"><strong>Гость в «+»</strong> расскажет 3–5 людям — часть придёт.</li>
+      <li class="list__item"><strong>Гость в «0»</strong> не расскажет — нечего делиться.</li>
+      <li class="list__item"><strong>Гость в «−»</strong> расскажет максимально многим — негатив разлетается.</li>
+    </ul>
+  </div>
+
+  <div class="page-number"><span class="page-number__dot"></span>05</div>
+</div>
+
+<!-- ===== СТРАНИЦА 6: ГОСТЕПРИИМНОЕ ПОВЕДЕНИЕ ===== -->
+<div class="page">
+  <div class="page-header">
+    <span>Сервис-бук · Белый мыс</span>
+    <span class="page-header__section">Гостеприимство</span>
+  </div>
+
+  <h1 class="h1 h1--light">Гостеприимное поведение</h1>
+  <p class="text text--muted">Следуем принципу «нам не всё равно» и стремимся превзойти ожидания — это рождает поведение гостеприимства.</p>
+
+  <div class="accent-box" style="text-align:center;">
+    <div class="h3" style="letter-spacing:4px; color: var(--green);">В Н И М А Н И Е</div>
+  </div>
+
+  <div class="list" style="margin-top:6px;">
+    <div class="list__item"><strong>Внимание к деталям.</strong> Замечай мелочи, читай настроение гостя.</div>
+    <div class="list__item"><strong>Настроение.</strong> Управляй эмоциями и подстраивайся под гостей.</div>
+    <div class="list__item"><strong>Искренняя улыбка.</strong> Позитив в работе с гостями и коллегами.</div>
+    <div class="list__item"><strong>Менеджер в зале.</strong> Гость чувствует, что всё под контролем.</div>
+    <div class="list__item"><strong>Альтернатива, а не отказ.</strong> Если «нет» — предложи вариант.</div>
+    <div class="list__item"><strong>Имя гостя.</strong> Спроси и используй обращение.</div>
+    <div class="list__item"><strong>Индивидуальный подход.</strong> Люди разные — учитывай нюансы.</div>
+    <div class="list__item"><strong>Контакт глаз.</strong> Смотри на гостя при общении и подаче.</div>
+  </div>
+
+  <div class="page-number"><span class="page-number__dot"></span>06</div>
+</div>
+
+<!-- ===== СТРАНИЦА 7: НЕВЕРБАЛИКА ===== -->
+<div class="page">
+  <div class="page-header">
+    <span>Сервис-бук · Белый мыс</span>
+    <span class="page-header__section">Гостеприимство</span>
+  </div>
+
+  <h1 class="h1 h1--light">Невербальное проявление</h1>
+  <p class="text text--muted">Язык тела говорит громче слов. Ключевые элементы невербального гостеприимства:</p>
+
+  <h2 class="h2" style="margin-top:8px;">✅ Делай так</h2>
+  <div class="grid-3" style="margin:12px 0;">
+    <div class="nonverbal-item"><svg class="icon"><use href="#icon-smile" /></svg><div class="nonverbal-title">Улыбка</div><div class="nonverbal-text">Искренняя, доброжелательная</div></div>
+    <div class="nonverbal-item"><svg class="icon"><use href="#icon-hands" /></svg><div class="nonverbal-title">Открытые жесты</div><div class="nonverbal-text">Руки видны, ладони открыты</div></div>
+    <div class="nonverbal-item"><svg class="icon"><use href="#icon-open" /></svg><div class="nonverbal-title">Визуальный контакт</div><div class="nonverbal-text">Смотри на гостя</div></div>
+    <div class="nonverbal-item"><svg class="icon"><use href="#icon-stand" /></svg><div class="nonverbal-title">Открытая поза</div><div class="nonverbal-text">Без скрещённых рук</div></div>
+    <div class="nonverbal-item"><svg class="icon"><use href="#icon-step" /></svg><div class="nonverbal-title">Шаг навстречу</div><div class="nonverbal-text">Двигайся к гостю</div></div>
+    <div class="nonverbal-item"><svg class="icon"><use href="#icon-wave" /></svg><div class="nonverbal-title">Кивок/жест</div><div class="nonverbal-text">Подтверждай, что заметил</div></div>
+  </div>
+
+  <h2 class="h2" style="color:#c23a3a; margin-top:10px;">❌ Не делай</h2>
+  <div class="grid-3" style="margin:12px 0;">
+    <div class="nonverbal-item"><svg class="icon icon--amber"><use href="#icon-group" /></svg><div class="nonverbal-title">Кучки</div><div class="nonverbal-text">Не собирайтесь, теряя гостей</div></div>
+    <div class="nonverbal-item"><svg class="icon icon--amber"><use href="#icon-lean" /></svg><div class="nonverbal-title">Опора</div><div class="nonverbal-text">Не облокачивайся</div></div>
+    <div class="nonverbal-item"><svg class="icon icon--amber"><use href="#icon-phone" /></svg><div class="nonverbal-title">Телефон</div><div class="nonverbal-text">Не уткнувшись при гостях</div></div>
+  </div>
+
+  <div class="accent-box" style="margin-top:14px;">
+    <div class="h3" style="color: var(--green);">Совет</div>
+    <p class="text text--muted" style="margin-bottom:0;">Выбери точку обзора зала. Так заметишь потребности гостей вовремя.</p>
+  </div>
+
+  <div class="page-number"><span class="page-number__dot"></span>07</div>
+</div>
+
+</body>
+</html>

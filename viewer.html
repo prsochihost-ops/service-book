@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Сервис-бук — Белый Мыс (Viewer)</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: #2a2a2a;
+      font-family: 'Inter', sans-serif;
+      overflow: hidden;
+    }
+
+    .viewer {
+      display: flex;
+      height: 100vh;
+    }
+
+    .sidebar {
+      width: 250px;
+      background: #1a1a1a;
+      color: #fff;
+      overflow-y: auto;
+      border-right: 2px solid #FFC864;
+    }
+
+    .sidebar__header {
+      padding: 20px;
+      background: #FFC864;
+      color: #1A1A1A;
+      font-weight: 800;
+      font-size: 18px;
+      text-align: center;
+    }
+
+    .sidebar__pages {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .sidebar__page {
+      padding: 12px 20px;
+      cursor: pointer;
+      border-bottom: 1px solid #333;
+      transition: background 0.2s;
+      font-size: 13px;
+    }
+
+    .sidebar__page:hover {
+      background: #2a2a2a;
+    }
+
+    .sidebar__page.active {
+      background: #FFC864;
+      color: #1A1A1A;
+      font-weight: 700;
+    }
+
+    .sidebar__page-number {
+      display: inline-block;
+      width: 30px;
+      font-weight: 700;
+      color: #FFC864;
+    }
+
+    .sidebar__page.active .sidebar__page-number {
+      color: #1A1A1A;
+    }
+
+    .content {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 20px;
+      overflow-y: auto;
+      background: #E8E8E8;
+    }
+
+    .iframe-container {
+      width: 100%;
+      max-width: 210mm;
+      background: white;
+      box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+      margin-bottom: 20px;
+    }
+
+    .page-iframe {
+      width: 100%;
+      height: 297mm;
+      border: none;
+      display: block;
+    }
+
+    .controls {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      display: flex;
+      gap: 10px;
+      z-index: 100;
+    }
+
+    .btn {
+      background: #FFC864;
+      color: #1A1A1A;
+      border: none;
+      padding: 12px 20px;
+      border-radius: 8px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: transform 0.2s, box-shadow 0.2s;
+      font-size: 14px;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(255, 200, 100, 0.4);
+    }
+
+    .btn:disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+    }
+  </style>
+</head>
+<body>
+  <div class="viewer">
+    <nav class="sidebar">
+      <div class="sidebar__header">Сервис-бук<br>Белый Мыс</div>
+      <ul class="sidebar__pages" id="pagesList"></ul>
+    </nav>
+
+    <main class="content">
+      <div class="iframe-container">
+        <iframe id="pageFrame" class="page-iframe" src=""></iframe>
+      </div>
+    </main>
+  </div>
+
+  <div class="controls">
+    <button class="btn" id="prevBtn" onclick="prevPage()">← Назад</button>
+    <button class="btn" id="nextBtn" onclick="nextPage()">Вперёд →</button>
+    <button class="btn" onclick="printAll()">🖨️ Печать</button>
+  </div>
+
+  <script>
+    const pages = [
+      { id: 1, title: 'Обложка', file: 'page_01_cover.html' },
+      { id: 2, title: 'Содержание', file: 'page_02_contents.html' },
+      { id: 3, title: 'Введение', file: 'page_03_intro.html' },
+      { id: 4, title: 'Гостеприимство', file: 'page_04_hospitality.html' },
+      { id: 5, title: 'Теория ожиданий', file: 'page_05.html' },
+      { id: 6, title: 'Гостеприимное поведение', file: 'page_06.html' },
+      { id: 7, title: 'Невербальное проявление', file: 'page_07.html' },
+      { id: 8, title: 'Принцип SERVICE', file: 'page_08.html' },
+      { id: 9, title: 'Специальные просьбы', file: 'page_09.html' },
+      { id: 10, title: 'Приятные мелочи', file: 'page_10.html' },
+      { id: 11, title: 'События', file: 'page_11.html' },
+      { id: 12, title: 'Про сервис', file: 'page_12.html' },
+      { id: 13, title: 'Общие принципы', file: 'page_13.html' },
+      { id: 14, title: 'Правила взаимодействия', file: 'page_14.html' },
+      { id: 15, title: 'Правила санитарии', file: 'page_15.html' },
+      { id: 16, title: 'Нестандартные ситуации', file: 'page_16.html' },
+      { id: 17, title: 'Как реагировать', file: 'page_17.html' },
+      { id: 18, title: 'Алгоритм BLAST', file: 'page_18.html' },
+      { id: 19, title: 'Типология гостей', file: 'page_19.html' },
+      { id: 20, title: 'Приёмы саморегуляции', file: 'page_20.html' },
+      { id: 21, title: 'Кодекс работы', file: 'page_21.html' },
+      { id: 22, title: 'Основы командной работы', file: 'page_22.html' },
+      { id: 23, title: 'Заключение', file: 'page_23.html' }
+    ];
+
+    let currentPage = 0;
+
+    function init() {
+      const pagesList = document.getElementById('pagesList');
+      
+      pages.forEach((page, index) => {
+        const li = document.createElement('li');
+        li.className = 'sidebar__page';
+        li.innerHTML = `<span class="sidebar__page-number">${String(page.id).padStart(2, '0')}</span> ${page.title}`;
+        li.onclick = () => loadPage(index);
+        pagesList.appendChild(li);
+      });
+
+      loadPage(0);
+    }
+
+    function loadPage(index) {
+      if (index < 0 || index >= pages.length) return;
+      
+      currentPage = index;
+      const page = pages[index];
+      
+      // Обновляем iframe
+      document.getElementById('pageFrame').src = `pages/${page.file}`;
+      
+      // Обновляем активный пункт меню
+      document.querySelectorAll('.sidebar__page').forEach((el, i) => {
+        el.classList.toggle('active', i === index);
+      });
+      
+      // Обновляем кнопки
+      document.getElementById('prevBtn').disabled = index === 0;
+      document.getElementById('nextBtn').disabled = index === pages.length - 1;
+    }
+
+    function prevPage() {
+      loadPage(currentPage - 1);
+    }
+
+    function nextPage() {
+      loadPage(currentPage + 1);
+    }
+
+    function printAll() {
+      window.open('index_typo.html', '_blank');
+    }
+
+    // Навигация стрелками
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'ArrowLeft') prevPage();
+      if (e.key === 'ArrowRight') nextPage();
+    });
+
+    init();
+  </script>
+</body>
+</html>

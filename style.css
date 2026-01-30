@@ -494,7 +494,7 @@ body {
   content: counter(item);
   counter-increment: item;
   background: var(--green-shape);
-  color: var(--black);
+  color: var(--white);
   width: 22px;
   height: 22px;
   border-radius: 50%;
@@ -590,7 +590,7 @@ body {
   width: 36px;
   height: 36px;
   background: var(--green-shape);
-  color: var(--black);
+  color: var(--white);
   font-size: 18pt;
   font-weight: 800;
   display: flex;
@@ -631,7 +631,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--black);
+  color: var(--white);
   font-size: 18pt;
 }
 
@@ -671,6 +671,7 @@ body {
   flex-shrink: 0;
   background: var(--green-shape);
   border-radius: 50%;
+  color: var(--white);
 }
 
 .expectation-label {
@@ -715,7 +716,7 @@ body {
   justify-content: center;
   background: var(--green-shape);
   border-radius: 12px;
-  color: var(--black);
+  color: var(--white);
 }
 
 /* ===== ПЕРЕОПРЕДЕЛЕНИЯ ЦВЕТОВ ===== */
